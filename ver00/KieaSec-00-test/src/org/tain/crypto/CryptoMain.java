@@ -18,7 +18,13 @@ public class CryptoMain {
 		System.out.println("encrypted: " + encrypted);
 		System.out.println("decrypted: " + decrypted);
 	}
-	
+	/*
+		Information
+		1. Secret Key
+		2. IV(Initialize Vector)
+		3. Cipher Mode(CBC/ECB/...)
+		4. Padding Mode(PKCS5/PKCS7/...)
+	*/
 	private static String ALG = "AES/CBC/PKCS5Padding";
 	private static String PK = "01234567890123456789012345678901"; // 32bytes
 	private static String IV = PK.substring(0, 16); // 16bytes
