@@ -54,3 +54,53 @@ public class CryptoMain {
 		return new String(decrypted, "UTF-8");
 	}
 }
+
+/* Node.js
+    const privateKey = "01234567890123456789012345678901"; // 32byte
+    const ivKey = privateKey.substring(0, 16); // 16byte
+    const chainingMode = "AES-256-CBC";
+    const encrypt = (utf8Text: string) => {
+        const cipher = crypto.createCipheriv(chainingMode, privateKey, ivKey);
+        cipher.setAutoPadding(false);
+        let encrypted = cipher.update(pkcs7Pad(utf8Text), undefined, "base64");
+        encrypted += cipher.final("base64");
+        return encrypted;
+    };
+
+    const decrypt = (base64Text: string) => {
+        const decipher = crypto.createDecipheriv(chainingMode, privateKey, this._ivKey);
+        decipher.setAutoPadding(false);
+        let decrypted = decipher.update(base64Text, "base64", "utf8");
+        decrypted += decipher.final("utf8");
+        return pkcs7Unpad(decrypted);
+    };
+
+    const pkcs7 = require("pkcs7");
+    
+    const pkcs7Pad = (params: string) => {
+        const buffer = Buffer.from(params, "utf8");
+        const bytes = new Uint8Array(buffer.length);
+        let i = buffer.length;
+        while (i--) {
+            bytes[i] = buffer[i];
+        }
+        return Buffer.from(pkcs7.pad(bytes) as Uint8Array);
+    }
+    
+    const pkcs7Unpad = (params: string) => {
+        const buffer = Buffer.from(params, "utf8");
+        const bytes = new Uint8Array(buffer.length);
+        let i = buffer.length;
+        while (i--) {
+            bytes[i] = buffer[i];
+        }
+        const result = Buffer.from(pkcs7.unpad(bytes) as Uint8Array);
+        return result.toString("utf8");
+    }
+    
+    const plainText = "저를 암호화 해주세요";
+    const encrypted = encrypt(plainText);
+    console.log("PLAIN_TEXT", plainText);
+    console.log("ENCRYPTED", encrypted);
+    console.log("DECRYPTED", decrypt(encrypted));
+*/
