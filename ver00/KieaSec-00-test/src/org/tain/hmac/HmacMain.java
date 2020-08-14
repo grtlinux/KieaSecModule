@@ -11,7 +11,7 @@ public class HmacMain {
 
 	public static void main(String[] args) {
 		try {
-			String key = "the shared secret key here";
+			String key = "12345678901234567890123456789012";
 			String message = "the message to hash here";
 
 			Mac hasher = Mac.getInstance("HmacSHA256");
@@ -20,12 +20,12 @@ public class HmacMain {
 			byte[] hash = hasher.doFinal(message.getBytes());
 
 			// to lowercase hexits
-			DatatypeConverter.printHexBinary(hash);
-			System.out.println(">>>>> " + hash.length);
+			//DatatypeConverter.printHexBinary(hash);
+			System.out.println(">>>>> " + DatatypeConverter.printHexBinary(hash));
 
 			// to base64
-			DatatypeConverter.printBase64Binary(hash);
-			System.out.println(">>>>> " + hash.length);
+			//DatatypeConverter.printBase64Binary(hash);
+			System.out.println(">>>>> " + DatatypeConverter.printBase64Binary(hash));
 		}
 		catch (NoSuchAlgorithmException e) {}
 		catch (InvalidKeyException e) {}
