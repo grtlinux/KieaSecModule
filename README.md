@@ -87,7 +87,15 @@ Kiea Security Test Module about AES256(?), HMAC...
 
 ![007](007.png)
 
+---
+# Reference
 
+- (https://www.kisa.or.kr/jsp/common/downloadAction.jsp?bno=259&dno=82&fseq=1)
+- (https://alexonepath.github.io/category/etc/etc-crypto.html#)
+- (https://jusungpark.tistory.com/34)
+- (https://javaplant.tistory.com/26)
+- (https://www.twilio.com/blog/what-is-public-key-cryptography)
+- (https://m.blog.naver.com/PostView.nhn?blogId=jvioonpe&logNo=220703730770&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
 
 
