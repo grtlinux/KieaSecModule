@@ -19,7 +19,7 @@ Kiea Security Test Module about AES256(?), HMAC...
 - 양방향암호화 : 암호화와 복호화과정을 통해 송.수신간 주고받는 메시지를 안전하게 암.복호화하는 과정
 - 단방향암호화 : 해싱(Hashing)을 이용한 암호화 방식으로 양방향과는 다른 개념으로, 평문을 암호문으로 암호화는 가능하지만 암호문을 평문으로 복호화 하는 것은 불가능.
 
-![001](001.png)
+![001](./001.png)
 
 ---
 # 양방향 암호화(대칭/비대칭 키)
@@ -30,7 +30,7 @@ Kiea Security Test Module about AES256(?), HMAC...
   - 전자서명을 위한 알고리즘에서는 Private Key로 메시지를 서명하고, Public Key로 검증
   - 메시지 교환에서는 Public Key로 메시지를 암호화하고 Private Key로 복호화한다.
 
-![002](002.png)
+![002](./002.png)
 
 ## 대칭키 암호화
 
@@ -39,7 +39,7 @@ Kiea Security Test Module about AES256(?), HMAC...
 - 문제점은 수신측에 키를 전달하는 과정에서 유출될 우려가 있음
 - 스트림기반, 블록기반의 암호화로 나눌수 있음
 
-![003](003.png)
+![003](./003.png)
 
 ### 스트림기반 암호화
 
@@ -48,7 +48,7 @@ Kiea Security Test Module about AES256(?), HMAC...
 - 속도가 빠르고 오류 전파 현상이 없다는 장점
 - 주로 오디오/비디오 스트리밍 시 사용
 
-![004](004.png)
+![004](./004.png)
 
 ### 블록기반 암호화
 
@@ -56,7 +56,7 @@ Kiea Security Test Module about AES256(?), HMAC...
 - 문자열 단어 하나하나를 블록으로 나누어 암호화하는 과정
 - DES, AES, IDEA, SEED 등의 블록기반 암호화 알고리즘
 
-![005](005.png)
+![005](./005.png)
 
 ## 비대칭키 암호화
 - 종류 : DSA(전자서명), RSA(메시지 암.복호화)
@@ -64,7 +64,7 @@ Kiea Security Test Module about AES256(?), HMAC...
 - 키생성시 Private Key와 Public Key 2개의 키가 도출되며, Public Key는 공개해도 문제가 되지 않는다.
 - 인수분해, 이산대수, 타원곡선 암호화로 나뉨
 
-![006](006.png)
+![006](./006.png)
 
 ### ECC(Elliptic Curve Cryptography)
 
@@ -90,7 +90,7 @@ Kiea Security Test Module about AES256(?), HMAC...
 
 ## 단방향 Hash 알고리즘
 
-![007](007.png)
+![007](./007.png)
 
 ---
 # Reference
